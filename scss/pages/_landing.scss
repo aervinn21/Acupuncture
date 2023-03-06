@@ -1,10 +1,71 @@
 .border-bottom-primary{
     border-bottom: 20px solid $clr-primary;
+    @include mediaQuery(){
+        border-bottom: 20px solid blue;
+    }
 }
 .banner{
     background-image: url("/img/banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: gray;
+    background-blend-mode: multiply;
     height: 80vh;
-    filter: brightness(70%);
+    text-align: center;
+    color: $clr-white;
+    hr{
+        width: 30%;
+        margin: 2rem auto;
+        @include mediaQuery(){
+            width: 100%;
+        }
+    }
+    h2{
+        font-size: clamp (2rem, 3vw, 3rem);
+    }
+    h3{
+        font-size: clamp (1.5rem, 2vw, 2rem);
+    }
+    p{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+.services{
+    padding: 6rem 0;
+    color: $clr-gray;
+    &__wrapper{
+        @include grid(3, 2rem);
+        @include mediaQuery(){
+            @include grid(1,2rem);
+        }
+    }
+}
+.claim{
+    padding: 2rem 0;
+}
+.about{
+    padding: 6rem 0 2rem 0;
+
+    &__wrapper{
+        @include homeFlex;
+        @include mediaQuery(){
+            flex-direction: column;
+        }
+}
+}
+#about{
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+    background-color: rgba(95, 255, 31, 0.048);
+    &__wrapper{
+        @include homeFlex;
+        @include mediaQuery(){
+            flex-direction: column;
+        }
+}
+}
+
+.slider{
+    padding: 6rem 0;
 }
