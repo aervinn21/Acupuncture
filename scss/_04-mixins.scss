@@ -7,6 +7,10 @@
     display: flex;
     gap: 4rem;
 }
+@mixin locFlex{
+    display:flex;
+    gap: 6rem;
+}
 
 @mixin centerSpaceBetween{
     display: flex;
